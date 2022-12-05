@@ -1,10 +1,10 @@
 import Day from './Day';
 
-const Week = () => {
+const Week = ({ data, getUnitFromUnix }) => {
   return (
-    <div className="week">
-      {[1,2,3,4,5,6,7].map((day) => {
-        return (<Day />)
+    <div className='week'>
+      {data.map((day, index) => {
+        return (<Day data={day[13]} getUnitFromUnix={getUnitFromUnix} key={index} />)
       })}
     </div>
   );

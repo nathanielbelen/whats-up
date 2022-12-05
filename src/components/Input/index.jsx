@@ -1,9 +1,9 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from 'react';
 import flag from 'country-code-emoji';
-import axios from "axios";
-import _ from "underscore";
-import DatalistInput from "react-datalist-input";
-import "./index.css";
+import axios from 'axios';
+import _ from 'underscore';
+import DatalistInput from 'react-datalist-input';
+import './index.css';
 
 const locationApi = 'https://geocoding-api.open-meteo.com/v1/search';
 
@@ -29,7 +29,7 @@ const Input = ({ setLocation }) => {
   };
 
   useEffect(() => {
-    if (search !== "") {
+    if (search !== '') {
       axios
         .get(locationApi, { params: { name: search }})
         .then((res) => {
@@ -41,8 +41,8 @@ const Input = ({ setLocation }) => {
   return (
     <div className='input-container'>
       <DatalistInput
-        inputProps={{ className: "datalist-input" }}
-        placeholder="Enter your location"
+        inputProps={{ className: 'datalist-input' }}
+        placeholder='Enter your location'
         onChange={handleChange}
         onSelect={(item) => {
           setLocation(item);
