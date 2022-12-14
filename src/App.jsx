@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className='container'>
-      {!location ? <div className='app-title'>what's up</div> : null}
+      {!location ? <div className='app-title'>what's up ☀️</div> : null}
       <Input setLocation={setLocation} />
       {location ? <Weather location={location} /> : null}
     </div>

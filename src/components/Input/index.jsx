@@ -10,9 +10,7 @@ const locationApi = 'https://geocoding-api.open-meteo.com/v1/search';
 const resultCb = (result) => {
   const format = {
     id: result.id,
-    value: `${flag(result.country_code)} ${result.name}, ${
-      result.admin1
-    }, ${result.country}`,
+    value: `${flag(result.country_code)} ${result.name}, ${(result.admin1 || '') + ', '}${result.country}`,
     info: result,
   }
   return format
@@ -32,7 +30,7 @@ const Input = ({ setLocation }) => {
   useEffect(() => {
     if (search !== '') {
       axios
-        .get(locationApi, { params: { name: search }})
+        .get(locationApi, { params: { name: search, count: 5 }})
         .then((res) => {
           if (res.data.results) setResults(res.data.results.map(resultCb));
         });
