@@ -34,7 +34,7 @@
 }
 
 .forecast {
-  flex-grow: 1;
+  height: 350px;
 }
 
 .week {
@@ -56,6 +56,13 @@
   align-items: center;
 }
 
+.uncurrent-day:hover {
+  cursor: pointer;
+}
+
+.current-day {
+  background-color: #302d2d;
+}
 
 .day {
 

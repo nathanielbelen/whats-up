@@ -43,8 +43,8 @@ const Weather = ({ location }) => {
   return (
     <div className='weather-container'>
       <Details data={data[day][hour]} getUnitFromUnix={getUnitFromUnix} location={location} day={day} hour={hour} />
-      <Forecast data={data[day]} />
-      <Week data={data} getUnitFromUnix={getUnitFromUnix} />
+      <Forecast data={data[day]} setHour={setHour} />
+      <Week data={data} getUnitFromUnix={getUnitFromUnix} setDay={setDay} dayIndex={day} />
     </div>
   );
 };
