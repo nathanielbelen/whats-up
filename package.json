@@ -12,6 +12,7 @@
     "axios": "^1.2.0",
     "chart.js": "^4.0.1",
     "country-code-emoji": "^2.3.0",
+    "framer-motion": "^7.9.1",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.0.1",
     "react-datalist-input": "^3.2.1",
