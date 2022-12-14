@@ -4,7 +4,7 @@ const Day = ({ data, getUnitFromUnix, setDay, day, currentDay }) => {
   return (
     <DayDiv currentDay={currentDay} day={day} setDay={setDay}>
       <div className='day'>{getUnitFromUnix('day', data[0])}</div>
-      <div className='icon'>{weatherCode[2][0]}</div>
+      <div className='icon'>{weatherCode[data[2]][0]}</div>
       {/* <div className='description'>{weatherCode[2][1]}</div> */}
       <div className='temperature'>{data[1]} °F</div>
     </DayDiv>

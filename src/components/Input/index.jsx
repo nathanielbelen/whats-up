@@ -24,6 +24,7 @@ const Input = ({ setLocation }) => {
 
   let throttledChange = useRef(_.throttle(setSearch, 500));
 
+
   const handleChange = (e) => {
     throttledChange.current(e.target.value);
   };
@@ -38,6 +39,11 @@ const Input = ({ setLocation }) => {
     }
   }, [search]);
 
+  useEffect(() => {
+    console.log('rendered input, search: ', search)
+  }, []);
+
+
   return (
     <div className='input-container'>
       <DatalistInput
@@ -45,6 +51,7 @@ const Input = ({ setLocation }) => {
         placeholder='Enter your location'
         onChange={handleChange}
         onSelect={(item) => {
+          setSearch(item.value);
           setLocation(item);
         }}
         items={results}

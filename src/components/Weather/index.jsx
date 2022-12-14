@@ -40,6 +40,10 @@ const Weather = ({ location }) => {
   const [hour, setHour] = useState(13);
   const [day, setDay] = useState(0);
 
+  if (!location) {
+    return null;
+  }
+
   return (
     <div className='weather-container'>
       <Details data={data[day][hour]} getUnitFromUnix={getUnitFromUnix} location={location} day={day} hour={hour} />
