@@ -34,7 +34,7 @@ function App() {
         {showWeather && <Weather location={location} key="weather" />}
       </AnimatePresence>
       <footer>
-        app by{" "}
+        weather app by{" "}
         <a href="https://nathanielbelen.com" target="_blank">
           nathaniel
         </a> | <a href="https://github.com/nathanielbelen/whats-up" target="_blank">
