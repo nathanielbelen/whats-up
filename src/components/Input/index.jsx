@@ -38,11 +38,6 @@ const Input = ({ setLocation }) => {
     }
   }, [search]);
 
-  useEffect(() => {
-    console.log('rendered input, search: ', search)
-  }, []);
-
-
   return (
     <motion.div
       initial={{ opacity: 0 }}

@@ -2,8 +2,6 @@ import weatherCode from "../weatherCode.json";
 import { motion } from "framer-motion";
 
 const Details = ({ data, location, getUnitFromUnix, day, hour }) => {
-  console.log("location", location);
-  console.log("data", data);
   return (
     <motion.div
       initial={{ opacity: 0 }}
