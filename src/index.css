@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Heebo, Avenir, Helvetica, Arial, sans-serif;
   /* border: 1px solid; */
   /* border-color: #f1f1f1; */
 }
@@ -15,4 +15,14 @@
 body {
   background-color: #242424;
   color: #f1f1f1;
+}
+
+footer {
+  padding: 10px 0 5px;
+  justify-self: end;
+  font-size: 0.75rem;
+}
+
+footer a {
+  color: white;
 }

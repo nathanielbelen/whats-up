@@ -34,7 +34,6 @@
   flex-direction: column;
   list-style-type: none;
   box-shadow: var(--shadow);
-  z-index: 10;
 }
 
 .react-datalist-input__listbox-option {
@@ -73,9 +72,16 @@
 .input-container {
   padding: 1rem 0;
   width: 100%;
+  z-index: 1;
 }
 
 mark {
   background-color: rgba(255, 255, 255, 0);
   font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .datalist-input {
+    font-size: 1.5rem;
+  }
 }

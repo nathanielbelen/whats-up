@@ -1,5 +1,6 @@
 import { Line, getElementAtEvent } from "react-chartjs-2";
 import Chart from "chart.js/auto";
+import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 
 const Forecast = ({ data, setHour }) => {
@@ -20,14 +21,19 @@ const Forecast = ({ data, setHour }) => {
   };
 
   return (
-    <div className="forecast">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 1, duration: 0.5 }}
+      className="forecast"
+    >
       <Line
         ref={chartRef}
         data={{ labels: times, datasets: [{ label: "", data: temps }] }}
         onClick={handleChartClick}
         options={chartOptions}
       />
-    </div>
+    </motion.div>
   );
 };
 

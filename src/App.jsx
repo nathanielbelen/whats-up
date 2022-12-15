@@ -1,24 +1,46 @@
-import { useEffect, useState } from 'react';
-import Input from './components/Input';
-import Weather from './components/Weather';
-import './App.css';
-
-const testData = {"id":5407933,"value":"🇺🇸 West Covina, California, United States","info":{"id":5407933,"name":"West Covina","latitude":34.06862,"longitude":-117.93895,"elevation":117,"feature_code":"PPL","country_code":"US","admin1_id":5332921,"admin2_id":5368381,"timezone":"America/Los_Angeles","population":108484,"postcodes":["91790","91791","91792","91793"],"country_id":6252001,"country":"United States","admin1":"California","admin2":"Los Angeles"}}
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import Input from "./components/Input";
+import Weather from "./components/Weather";
+import "./App.css";
 
 function App() {
   const [location, setLocation] = useState(null);
+  const [showWeather, setShowWeather] = useState(true);
 
   useEffect(() => {
-    console.log(location);
-  }, [location])
+    if (location) setShowWeather(true);
+  }, [location]);
 
   return (
-    <div className='container'>
-      {!location ? <div className='app-title'>what's up ☀️</div> : null}
-      <Input setLocation={setLocation} />
-      {location ? <Weather location={location} /> : null}
+    <div className="container">
+      <AnimatePresence>
+        <motion.div
+          key={"app-title"}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.9 }}
+          className="app-title"
+        >
+          what's up
+          <motion.span
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
+            ☀️
+          </motion.span>
+        </motion.div>
+        <Input setLocation={setLocation} />
+        {showWeather && <Weather location={location} key="weather" />}
+      </AnimatePresence>
+      <footer>
+        test by{" "}
+        <a href="https://nathanielbelen.com" target="_blank">
+          nathaniel
+        </a>
+      </footer>
     </div>
-  )
+  );
 }
 
 export default App;

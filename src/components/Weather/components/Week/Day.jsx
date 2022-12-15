@@ -5,7 +5,7 @@ const Day = ({ data, getUnitFromUnix, setDay, day, currentDay }) => {
     <DayDiv currentDay={currentDay} day={day} setDay={setDay}>
       <div className='day'>{getUnitFromUnix('day', data[0])}</div>
       <div className='icon'>{weatherCode[data[2]][0]}</div>
-      {/* <div className='description'>{weatherCode[2][1]}</div> */}
+      {/* <div className='description'>{weatherCode[data[2]][1]}</div> */}
       <div className='temperature'>{data[1]} °F</div>
     </DayDiv>
   );
@@ -19,23 +19,17 @@ const DayDiv = ({ currentDay, setDay, day, children }) => {
 
   if (isCurrentDay) {
     return (
-      <div className='day-details current-day'>
+      <div className='day-details current-day unselectable'>
         { children }
       </div>
     )
   } else {
     return (
-      <div className='day-details uncurrent-day' onClick={handleClick}>
+      <div className='day-details uncurrent-day unselectable' onClick={handleClick}>
         { children }
       </div>
     )
   }
 }
-
-// exampleData.hourly.time,
-// exampleData.hourly.temperature_2m,
-// exampleData.hourly.weathercode,
-// exampleData.hourly.precipitation,
-// exampleData.hourly.relativehumidity_2m
 
 export default Day;

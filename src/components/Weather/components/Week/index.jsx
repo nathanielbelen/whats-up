@@ -1,12 +1,27 @@
-import Day from './Day';
+import Day from "./Day";
+import { motion } from "framer-motion";
 
 const Week = ({ data, getUnitFromUnix, setDay, dayIndex }) => {
   return (
-    <div className='week'>
+    <motion.div
+        className="week"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 0.5 }}
+    >
       {data.map((day, index) => {
-        return (<Day data={day[13]} getUnitFromUnix={getUnitFromUnix} key={index} day={index} currentDay={dayIndex} setDay={setDay} />)
+        return (
+          <Day
+            data={day[13]}
+            getUnitFromUnix={getUnitFromUnix}
+            key={index}
+            day={index}
+            currentDay={dayIndex}
+            setDay={setDay}
+          />
+        );
       })}
-    </div>
+    </motion.div>
   );
 };
 

@@ -7,9 +7,23 @@
   align-items: center;
 }
 
+.unselectable {
+  user-select: none;
+}
+
+.app-title {
+  font-size: 6rem;
+  display: flex;
+  align-items: center;
+}
+
 @media screen and (max-width: 767px) {
   .container {
     min-width: 320px;
+  }
+
+  .app-title {
+    font-size: 3rem;
   }
 }
 
@@ -17,8 +31,4 @@
   .container {
     width: 768px;
   }
-}
-
-.app-title {
-  font-size: 6rem;
 }

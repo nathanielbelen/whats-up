@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { motion } from "framer-motion";
 import flag from 'country-code-emoji';
 import axios from 'axios';
 import _ from 'underscore';
@@ -43,7 +44,12 @@ const Input = ({ setLocation }) => {
 
 
   return (
-    <div className='input-container'>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.9, delay: 0.45 }}
+      className='input-container'
+    >
       <DatalistInput
         inputProps={{ className: 'datalist-input' }}
         placeholder='Enter your location'
@@ -54,7 +60,7 @@ const Input = ({ setLocation }) => {
         }}
         items={results}
       />
-    </div>
+    </motion.div>
   );
 };
 
