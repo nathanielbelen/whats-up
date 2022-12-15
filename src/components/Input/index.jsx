@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from "framer-motion";
-import flag from 'country-code-emoji';
 import axios from 'axios';
 import _ from 'underscore';
 import DatalistInput from 'react-datalist-input';
@@ -11,7 +10,7 @@ const locationApi = 'https://geocoding-api.open-meteo.com/v1/search';
 const resultCb = (result) => {
   const format = {
     id: result.id,
-    value: `${flag(result.country_code)} ${result.name}, ${result.admin1 ? `${result.admin1}, ` : ''}${result.country}`,
+    value: `${result.name}, ${result.admin1 ? `${result.admin1}, ` : ''}${result.country}`,
     info: result,
   }
   return format
