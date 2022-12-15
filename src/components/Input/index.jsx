@@ -11,7 +11,7 @@ const locationApi = 'https://geocoding-api.open-meteo.com/v1/search';
 const resultCb = (result) => {
   const format = {
     id: result.id,
-    value: `${flag(result.country_code)} ${result.name}, ${(result.admin1 || '') + ', '}${result.country}`,
+    value: `${flag(result.country_code)} ${result.name}, ${result.admin1 ? `${result.admin1}, ` : ''}${result.country}`,
     info: result,
   }
   return format
