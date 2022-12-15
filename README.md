@@ -8,6 +8,7 @@
   <a href='https://639aafc549fdf60008a592fa--classy-hotteok-c9ecbf.netlify.app/' target='_blank'>deployed app</a>
 </p>
 <p>
+  This application pulls data from Open-Meteo's <a href='https://open-meteo.com/en/docs' target='_blank'>Weather Forecast</a> and <a href='https://open-meteo.com/en/docs/geocoding-api' target='_blank'>Geocoding</a> API.
   I used a variety of npm packages, including:
   <ul>
     <li><a href='https://www.npmjs.com/package/axios' target='_blank'>axios</></li>
