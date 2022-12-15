@@ -30,5 +30,5 @@
 
   visit the served application
   ```sh
-  http://localhost:5173 (or url outputted by vite dev. server)
+  http://localhost:5173 (or url outputted by vite if default port is taken)
   ```
