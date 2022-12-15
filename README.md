@@ -5,7 +5,7 @@
   A weather app bootstrapped with Vite, and built with React.
 </p>
 <p align="center">
-  <a href='https://639aafc549fdf60008a592fa--classy-hotteok-c9ecbf.netlify.app/' target='_blank'>deployed app</a>
+  <a href='https://classy-hotteok-c9ecbf.netlify.app/' target='_blank'>deployed app</a>
 </p>
 <hr></hr>
 <p>
