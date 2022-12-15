@@ -20,7 +20,7 @@ function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.9 }}
-          className="app-title"
+          className="app-title unselectable"
         >
           what's up
           <motion.span
