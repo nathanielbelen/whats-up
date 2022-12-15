@@ -22,13 +22,13 @@ function App() {
           transition={{ duration: 0.9 }}
           className="app-title"
         >
-          what's up
+          <div>what's up
           <motion.span
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             ☀️
-          </motion.span>
+          </motion.span></div>
         </motion.div>
         <Input setLocation={setLocation} />
         {showWeather && <Weather location={location} key="weather" />}
