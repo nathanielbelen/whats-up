@@ -2,7 +2,7 @@
   what's up ☀️
 </h1>
 <p align="center">
-  This is a weather app bootstrapped with Vite, and built with React.
+  A weather app bootstrapped with Vite, and built with React.
 </p>
 <p align="center">
   <a href='https://639aafc549fdf60008a592fa--classy-hotteok-c9ecbf.netlify.app/' target='_blank'>deployed app</a>
