@@ -40,4 +40,4 @@
   To-do:
   - add better styling (color choices, element spacing)
   - fix clunkiness of animations when rendering Weather component
-  - refactor Day component to display better on mobile
+  - refactor and fix Day component to display better on mobile
